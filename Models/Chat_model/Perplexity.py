@@ -3,8 +3,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-model= ChatPerplexity(model='sonar',temperature=0.4)
+model= ChatPerplexity(model='sonar',temperature=0.4,max_tokens=50)
 
 query=input("Ask Perplexity:")
 result=model.invoke(query)
-print("Ans\n",result.content)
+print("Ans:",result.content)
